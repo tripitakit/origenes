@@ -15,7 +15,7 @@ origenes.complement("AGTC"); // "TCAG"
 
 origenes.reverse("AGTC"); // "CTGA"
 
-origenes.reverseComplement("AGTC"); // "CAGT" 
+origenes.reverseComplement("AGTC"); // "GACT" 
 ```
 
 ## Documentation
