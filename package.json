@@ -1,6 +1,6 @@
 {
   "name": "origenes",
-  "description": "my first node module",
+  "description": "Nucleotide sequence manipulation tools",
   "version": "0.0.1",
   "homepage": "https://github.com/tripitakit/origenes",
   "author": {

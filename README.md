@@ -1,9 +1,9 @@
 Origenes
 ===
-Implementing some basic DNA sequence manipulation tools.
 
-My very first experiment with node.js.
-A place to study, learn and have fun.
+Implementing some basic nucleotide's sequences manipulation tools.
+
+
 
 ## Getting Started
 Install the module with: `npm install origenes`
