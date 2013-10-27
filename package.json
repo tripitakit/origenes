@@ -1,7 +1,7 @@
 {
   "name": "origenes",
   "description": "my first node module",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/tripitakit/origenes",
   "author": {
     "name": "tripitakit",
@@ -31,9 +31,11 @@
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.1",
-	"underscore": "~1.4.4",
-	"underscore.string": "~2.3.3"
+    "grunt": "~0.4.1"	
+  },
+  "dependencies": {
+  	"underscore": "~1.4.4",
+  	"underscore.string": "~2.3.3"
   },
   "keywords": []
 }
