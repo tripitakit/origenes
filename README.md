@@ -1,6 +1,6 @@
-# origenes [![Build Status](https://secure.travis-ci.org/tripitakit/origenes.png?branch=master)](http://travis-ci.org/tripitakit/origenes)
-
-my first node module
+Origenes
+===
+My first node.js module. A place to study, learn and have fun.
 
 ## Getting Started
 Install the module with: `npm install origenes`
@@ -25,3 +25,4 @@ _(Nothing yet)_
 ## License
 Copyright (c) 2013 tripitakit  
 Licensed under the MIT license.
+
