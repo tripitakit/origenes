@@ -1,7 +1,8 @@
 Origenes
 ===
-
 Implementing some basic nucleotide's sequences manipulation tools.
+My first self-study module to learn node; this is an early alpha release, of no practical public use.
+
 
 
 
