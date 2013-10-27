@@ -12,10 +12,10 @@ exports['test'] = {
 	
 	'create a DNA sequence' : function(test) {
 		test.expect(4);
-		test.strictEqual(this.simple_oligo.type, 'DNA');
-		test.strictEqual(this.simple_oligo.seq, "ACTG")
-		test.strictEqual(this.simple_oligo.len,4);
-		test.strictEqual(this.complex_oligo.len,9);
+		test.strictEqual(this.simple_oligo.TYPE, 'DNA');
+		test.strictEqual(this.simple_oligo.SEQ, "ACTG")
+		test.strictEqual(this.simple_oligo.LEN,4);
+		test.strictEqual(this.complex_oligo.LEN,9);
 		test.done();
 	},
 	
