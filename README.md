@@ -10,7 +10,12 @@ Install the module with: `npm install origenes`
 
 ```javascript
 var origenes = require('origenes');
+
 origenes.complement("AGTC"); // "TCAG"
+
+origenes.reverse("AGTC"); // "CTGA"
+
+origenes.reverseComplement("AGTC"); // "CAGT" 
 ```
 
 ## Documentation

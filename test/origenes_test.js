@@ -17,9 +17,4 @@ exports['test'] = {
 		test.equal(origenes.reverseComplement("ACTG"), "CAGT");
 		test.done();
 	},
-	
-	'reverse and complement a DNA sequence with underscore reverse()' : function(test) {
-		test.equal(origenes.reverseComplement("ACTG"), "CAGT");
-		test.done();
-	},
 };
