@@ -7,7 +7,7 @@ Install the module with: `npm install origenes`
 
 ```javascript
 var origenes = require('origenes');
-origenes.awesome(); // "awesome"
+origenes.complement("AGTC"); // "TCAG"
 ```
 
 ## Documentation
