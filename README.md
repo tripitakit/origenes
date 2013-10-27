@@ -1,6 +1,9 @@
 Origenes
 ===
-My first node.js module. A place to study, learn and have fun.
+Implementing some basic DNA sequence manipulation tools.
+
+My very first experiment with node.js.
+A place to study, learn and have fun.
 
 ## Getting Started
 Install the module with: `npm install origenes`
