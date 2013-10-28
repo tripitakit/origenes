@@ -1,7 +1,7 @@
 {
   "name": "origenes",
   "description": "Nucleotide sequence manipulation tools",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "https://github.com/tripitakit/origenes",
   "author": {
     "name": "tripitakit",
