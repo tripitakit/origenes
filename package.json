@@ -1,7 +1,7 @@
 {
   "name": "origenes",
   "description": "Nucleotide sequence manipulation tools",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "homepage": "https://github.com/tripitakit/origenes",
   "author": {
     "name": "tripitakit",
@@ -38,5 +38,5 @@
   	"underscore.string": "~2.3.3"
   },
   "directories" : ["lib"],
-  "keywords": ["DNA","sequence", "manipulation"]
+  "keywords": ["DNA","sequence"]
 }
