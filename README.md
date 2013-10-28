@@ -18,6 +18,7 @@ var Sequence = require('origenes').Sequence;
 // Create sequence instances
 var simple_oligo = new Sequence('ACTG'),
 	complex_oligo = new Sequence('AN-RCTYGK');
+	rna = new Sequence("CAUG");
 	
 // Inspect instance CONSTANTS	
 simple_oligo.TYPE; // 'DNA'
@@ -31,6 +32,7 @@ complex_oligo.LEN; // 9
 simple_oligo.reverse(); // 'GTCA'
 simple_oligo.complement();  // 'TGAC'
 simple_oligo.reverseComplement(); // 'CAGT'
+simple_oligo.transcribe(); // 'UGAC'
 
 complex_oligo.complement(); // 'TN-YGARCN'
 

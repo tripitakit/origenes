@@ -7,6 +7,7 @@ exports['test'] = {
     setUp: function(done) {
       this.simple_oligo = new Sequence("ACTG");
 	  this.complex_oligo = new Sequence("AN-RCTYGK");
+	  this.rna = new Sequence("CAUG");
       done();
     },
 	
@@ -19,24 +20,46 @@ exports['test'] = {
 		test.done();
 	},
 	
-	'complement a sequence' : function(test) {
+	'sequence properties are constants': function(test) {
+		test.throws(function(){this.simple_oligo.SEQ="CGTA"}, Error);
+		test.throws(function(){this.simple_oligo.LEN=42}, Error);
+		test.throws(function(){this.simple_oligo.TYPE="DFQ"}, Error);
+		test.done();
+	},
+	
+	'complement a DNA sequence' : function(test) {
 		test.strictEqual(this.simple_oligo.complement(), "TGAC");
 		test.done();
 	},
 	
-	'complement a sequence with N, gaps and unrecognized nucleotides' : function(test) {
+	'complement a DNA sequence with N, gaps and unrecognized nucleotides' : function(test) {
 		test.strictEqual(this.complex_oligo.complement(), "TN-YGARCN");
 		test.done();
 	},
 	
-	'reverse a sequence' : function(test) {
+	'reverse a DNA sequence' : function(test) {
 		test.strictEqual(this.simple_oligo.reverse(), "GTCA");
 		test.done();
 	},
 	
-	'reverse and complement a sequence' : function(test) {
+	'reverse and complement a DNA sequence' : function(test) {
 		test.strictEqual(this.simple_oligo.reverseComplement(), "CAGT");
 		test.done();
 	},
 		
+	'create a RNA sequence' : function(test) {
+		test.strictEqual(this.rna.TYPE, "RNA");
+		test.done();
+	},
+	
+	'transcribe DNA->RNA' : function(test) {
+		test.strictEqual(this.simple_oligo.transcribe(), "UGAC")
+		test.done();
+	},
+	
+	'cannot transcribe RNA' : function(test) {
+		test.throws(function(){ this.rna.transcribe() });
+		test.done();
+	}
+	
 };
