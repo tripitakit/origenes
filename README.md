@@ -28,13 +28,13 @@ complex_oligo.LEN; // 9
 
 
 // Use instance methods
-
 simple_oligo.reverse(); // 'GTCA'
 simple_oligo.complement();  // 'TGAC'
 simple_oligo.reverseComplement(); // 'CAGT'
 simple_oligo.transcribe(); // 'UGAC'
-
 complex_oligo.complement(); // 'TN-YGARCN'
+simple_oligo.transcribe(); // "UGAC"
+rna.transcribe(); // "Error: can't transcribe RNA."
 
 ```
 
@@ -48,10 +48,16 @@ _(Coming soon)_
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+0.0.8 Add dictionaries for nucleic acids, transcribe DNA -> RNA;
+
 0.0.7 Sequence-refactoring and uppercase names of instance constants (that seems better)
+
 0.0.6 Add Sequence object; am I taking this seriously?
+
 0.0.5 Just playing around
-..
+
+[..]
+
 0.0.1 Init!
 
 ## License
