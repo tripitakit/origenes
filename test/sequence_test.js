@@ -7,7 +7,9 @@ exports['test'] = {
     setUp: function(done) {
       this.simple_oligo = new Sequence("ACTG");
 	  this.complex_oligo = new Sequence("AN-RCTYGK");
+	  this.long_oligo = new Sequence("GTTGACCGTAGCGAGTCCG");
 	  this.rna = new Sequence("ACUG");
+	  
       done();
     },
 	
@@ -75,5 +77,24 @@ exports['test'] = {
 		test.throws(function(){ this.rna.transcribe() });
 		test.done();
 	},
+	
+	'calculate Tm for oligos (18-25nt)' : function(test) {
+		test.expect(1);
+		test.strictEqual(this.long_oligo.Tm(), 62);
+		test.done();
+	},
+	
+	'cannot calculate Tm of non-oligos (< 18nt || > 25nt)' : function(test) {
+		test.expect(1);
+		test.throws(function(){ this.simple_oligo.Tm() });
+		test.done();
+	},
+	
+	'calculate Ta of oligos' : function(test) {
+		test.expect(1);
+		test.strictEqual(this.long_oligo.Ta(), 57);
+		test.done();
+	},
+	
 	
 };

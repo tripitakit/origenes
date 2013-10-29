@@ -11,26 +11,33 @@ Install the module with: `npm install origenes`
 
 var Sequence = require('origenes').Sequence;
 
-var simple_oligo = new Sequence('ACTG'),
-	complex_oligo = new Sequence('AN-RCTYGK'),
+var simple_seq = new Sequence('ACTG'),
+	complex_seq = new Sequence('AN-RCTYGK'),
+	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
 	rna = new Sequence("ACUG");
 
-simple_oligo.TYPE; // 'DNA'
-simple_oligo.SEQ; // 'ACTG'
-simple_oligo.LEN; // 4
+simple_seq.TYPE; // 'DNA'
+simple_seq.SEQ; // 'ACTG'
+simple_seq.LEN; // 4
 
 rna.TYPE; // "RNA"
 rna.SEQ; // "CAUG"
 
-simple_oligo.transcribe(); // 'ACUG'
-simple_oligo.reverse(); // 'GTCA'
-simple_oligo.complement();  // 'TGAC'
-simple_oligo.reverseComplement(); // 'CAGT'
+simple_seq.transcribe(); // 'ACUG'
+simple_seq.reverse(); // 'GTCA'
+simple_seq.complement();  // 'TGAC'
+simple_seq.reverseComplement(); // 'CAGT'
 
-complex_oligo.complement(); // 'TN-YGARCN'
+complex_seq.complement(); // 'TN-YGARCN'
 
 rna.complement(); // 'UGAC'
 rna.transcribe(); // 'Error: can't transcribe RNA.'
+
+oligonucleotide.Tm(); // 62 °C; = 4*(G+C) + 2*(A+T) 
+oligonucleotide.Ta(); // 57 °C; = Tm - 5
+
+simple_seq.Tm(); // "Error: can't calculate Tm, Ta of non oligo (18-25nt long) sequences";
+simple_seq.Ta(); // "Error: can't calculate Tm, Ta of non oligo (18-25nt long) sequences";
 
 ```
 
@@ -44,6 +51,8 @@ _(Coming soon)_
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+0.0.11 Add Tm and Ta calculation for oligos in [18..25] nt range
 
 0.0.10 Revision of readme document getting started
 
