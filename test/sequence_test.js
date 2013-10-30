@@ -51,25 +51,26 @@ exports['test'] = {
 	
 	'complement a DNA sequence' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.simple_oligo.complement(), "TGAC");
+		test.strictEqual(this.simple_oligo.complement().SEQ, "TGAC");
 		test.done();
 	},
 	
 	'complement a DNA sequence with N, gaps and unrecognized nucleotides' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.complex_oligo.complement(), "TN-YGARCN");
+		test.strictEqual(this.complex_oligo.complement().SEQ, "TN-YGARCN");
 		test.done();
 	},
 	
 	'reverse a DNA sequence' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.simple_oligo.reverse(), "GTCA");
+		test.strictEqual(this.simple_oligo.reverse().SEQ, "GTCA");
 		test.done();
 	},
 	
 	'reverse and complement a DNA sequence' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.simple_oligo.reverseComplement(), "CAGT");
+		var reversed_complement_seq_obj = this.simple_oligo.reverse().complement();
+		test.strictEqual(reversed_complement_seq_obj.SEQ, "CAGT");
 		test.done();
 	},
 		
@@ -81,13 +82,13 @@ exports['test'] = {
 	
 	'complement a RNA sequence' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.rna.complement(), "UGAC");
+		test.strictEqual(this.rna.complement().SEQ, "UGAC");
 		test.done();
 	},
 	
 	'transcribe DNA->RNA' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.simple_oligo.transcribe(), "ACUG")
+		test.strictEqual(this.simple_oligo.transcribe().SEQ, "ACUG")
 		test.done();
 	},
 	
@@ -97,7 +98,17 @@ exports['test'] = {
 		test.done();
 	},
 	
-
+	'reverse is chainable' : function(test) {
+		test.expect(1);
+		test.equal(this.simple_oligo.SEQ, this.simple_oligo.reverse().reverse().SEQ);
+		test.done();
+	}, 
+	
+	'complement reverse equals reverse complement (both are chainable)' : function(test) {
+		test.expect(1);
+		test.equal(this.simple_oligo.reverse().complement().SEQ, this.simple_oligo.complement().reverse().SEQ);
+		test.done();
+	}, 
 	
 	
 };

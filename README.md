@@ -7,43 +7,13 @@ Self-study module to learn node. Early alpha release, of no practical public use
 ## Getting Started
 Install the module with: `npm install origenes`
 
+At the moment, only Sequence is defined in orignes namespace.
+It represents nucleotide sequences (DNA or RNA), exposes some constant properties and
+a few usefull methods for their manipulation.
+
 ```javascript
 
 var Sequence = require('origenes').Sequence;
-
-// Create some sequence instances
-var simple_seq = new Sequence('ACTG'),
-	complex_seq = new Sequence('AN-RCTYGK'),
-	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
-	rna = new Sequence("ACUG");
-
-// Basic properties (as constants)
-simple_seq.TYPE; // 'DNA'
-simple_seq.SEQ; // 'ACTG'
-simple_seq.LEN; // 4
-
-rna.TYPE; // "RNA"
-rna.SEQ; // "ACUG"
-
-
-// Melting and annealing temperatures
-oligonucleotide.TM; // 62 °C; = 4*(G+C) + 2*(A+T) 
-oligonucleotide.TA; // 57 °C; = Tm - 5
-
-simple_seq.TM; // false
-simple_seq.TA; // false
-
-
-// Sequence instance methods
-simple_seq.transcribe(); // 'ACUG'
-simple_seq.reverse(); // 'GTCA'
-simple_seq.complement();  // 'TGAC'
-simple_seq.reverseComplement(); // 'CAGT'
-
-complex_seq.complement(); // 'TN-YGARCN'
-
-rna.complement(); // 'UGAC'
-rna.transcribe(); // 'Error: can't transcribe RNA.'
 
 ```
 
@@ -51,12 +21,128 @@ rna.transcribe(); // 'Error: can't transcribe RNA.'
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
+// Create some sequence instances
+
+var simple_seq = new Sequence('ACTG');
+/*
+	{ SEQ: 'ACTG', 
+	  LEN: 4,
+	  TYPE: 'DNA' }
+ */										
+
+var	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
+/*
+	{ SEQ: 'GTTGACCGTAGCGAGTCCG',
+	  LEN: 19,
+	  TYPE: 'DNA',
+	  TM: 62,
+	  TA: 57 }
+ */
+ 
+  
+var rna = new Sequence("ACUG");
+/*
+	{ SEQ: 'ACUG', 
+	  LEN: 4,
+	  TYPE: 'RNA' }
+ */
+
+var	complex_seq = new Sequence('AN-RCTYGK');
+/*
+	{ SEQ: 'AN-RCTYGK',
+	  LEN: 9,
+	  TYPE: 'DNA' }
+ */
+ 
+// Sequence instances are immutable, their properties are constants
+
+simple_seq.SEQ = "ATATATATATA";
+simple_seq.aNewProperty = "something":
+simple_seq; 
+/*
+	{ SEQ: 'ACTG', 
+	  LEN: 4,
+	  TYPE: 'DNA' }
+ */
+
+
+// Melting and annealing temperatures are calculated for oligonucleotides [18..25nt]
+
+oligonucleotide.TM; // 62  as 4*(G+C) + 2*(A+T) in °C
+oligonucleotide.TA; // 57  as (TM - 5) in °C
+
+
+// Tm, Ta are not defined for sequences shorter than 18nt or longer than 25nt
+
+simple_seq.TM; // undefined
+simple_seq.TA; // undefined
+
+
+
+// Sequence instance methods return new Sequence instances
+
+simple_seq.transcribe();
+/*
+	{ SEQ: 'ACUG', 
+	  LEN: 4,
+	  TYPE: 'RNA' }
+*/
+
+
+simple_seq.reverse();
+/*
+	{ SEQ: 'GTCA', 
+	  LEN: 4,
+	  TYPE: 'DNA' }
+*/
+
+
+simple_seq.complement(); 
+/*
+	{ SEQ: 'TGAC', 
+	  LEN: 4,
+	  TYPE: 'DNA' }
+*/
+
+complex_seq.complement(); 
+/*
+	{ SEQ: 'TN-YGARCN',
+	  LEN: 9,
+	  TYPE: 'DNA' }
+ */
+
+
+rna.complement(); 
+/*
+	{ SEQ: 'UGAC', 
+	  LEN: 4,
+	  TYPE: 'RNA' }
+*/
+
+rna.transcribe(); // 'Error: can't transcribe RNA.'
+
+
+// Instance methods are chainable
+
+simple_seq.reverse().complement(); // 'CAGT'
+/*
+	{ SEQ: 'CAGT', 
+	  LEN: 4,
+	  TYPE: 'DNA' }
+*/
+
+simple_seq.SEQ == simple_seq.reverse().reverse().SEQ; // true
+
+simple_seq.reverse().complement().SEQ == simple_seq.complement().reverse().SEQ; // true
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+0.0.13 Chainable methods
+
 0.0.12 Change Tm and Ta into Sequence instance CONSTANTS (only for 18..25nt oligos)
 
 0.0.11 Add Tm and Ta calculation for oligos in [18..25] nt range
