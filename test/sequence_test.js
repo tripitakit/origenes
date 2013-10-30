@@ -30,6 +30,25 @@ exports['test'] = {
 		test.done();
 	},
 	
+	'oligos (18-25nt) has a Tm constant' : function(test) {
+		test.expect(1);
+		test.strictEqual(this.long_oligo.TM, 62);
+		test.done();
+	},
+	
+	'non-oligos (< 18nt || > 25nt) dont have a Tm' : function(test) {
+		test.expect(1);
+		test.throws(function(){ this.simple_oligo.TM });
+		test.done();
+	},
+	
+	'oligos (18-25nt) has a Ta constant' : function(test) {
+		test.expect(1);
+		test.strictEqual(this.long_oligo.TA, 57);
+		test.done();
+	},
+	
+	
 	'complement a DNA sequence' : function(test) {
 		test.expect(1);
 		test.strictEqual(this.simple_oligo.complement(), "TGAC");
@@ -78,23 +97,7 @@ exports['test'] = {
 		test.done();
 	},
 	
-	'calculate Tm for oligos (18-25nt)' : function(test) {
-		test.expect(1);
-		test.strictEqual(this.long_oligo.Tm(), 62);
-		test.done();
-	},
-	
-	'cannot calculate Tm of non-oligos (< 18nt || > 25nt)' : function(test) {
-		test.expect(1);
-		test.throws(function(){ this.simple_oligo.Tm() });
-		test.done();
-	},
-	
-	'calculate Ta of oligos' : function(test) {
-		test.expect(1);
-		test.strictEqual(this.long_oligo.Ta(), 57);
-		test.done();
-	},
+
 	
 	
 };

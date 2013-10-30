@@ -11,11 +11,13 @@ Install the module with: `npm install origenes`
 
 var Sequence = require('origenes').Sequence;
 
+// Create some sequence instances
 var simple_seq = new Sequence('ACTG'),
 	complex_seq = new Sequence('AN-RCTYGK'),
 	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
 	rna = new Sequence("ACUG");
 
+// Basic properties (as constants)
 simple_seq.TYPE; // 'DNA'
 simple_seq.SEQ; // 'ACTG'
 simple_seq.LEN; // 4
@@ -23,6 +25,16 @@ simple_seq.LEN; // 4
 rna.TYPE; // "RNA"
 rna.SEQ; // "CAUG"
 
+
+// Melting and annealing temperatures
+oligonucleotide.TM; // 62 °C; = 4*(G+C) + 2*(A+T) 
+oligonucleotide.TA; // 57 °C; = Tm - 5
+
+simple_seq.TM; // false
+simple_seq.TA; // false
+
+
+// Sequence instance methods
 simple_seq.transcribe(); // 'ACUG'
 simple_seq.reverse(); // 'GTCA'
 simple_seq.complement();  // 'TGAC'
@@ -32,12 +44,6 @@ complex_seq.complement(); // 'TN-YGARCN'
 
 rna.complement(); // 'UGAC'
 rna.transcribe(); // 'Error: can't transcribe RNA.'
-
-oligonucleotide.Tm(); // 62 °C; = 4*(G+C) + 2*(A+T) 
-oligonucleotide.Ta(); // 57 °C; = Tm - 5
-
-simple_seq.Tm(); // "Error: can't calculate Tm, Ta of non oligo (18-25nt long) sequences";
-simple_seq.Ta(); // "Error: can't calculate Tm, Ta of non oligo (18-25nt long) sequences";
 
 ```
 
@@ -51,6 +57,7 @@ _(Coming soon)_
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+0.0.12 Change Tm and Ta into Sequence instance CONSTANTS (only for 18..25nt oligos)
 
 0.0.11 Add Tm and Ta calculation for oligos in [18..25] nt range
 
