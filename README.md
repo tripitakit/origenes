@@ -23,7 +23,7 @@ simple_seq.SEQ; // 'ACTG'
 simple_seq.LEN; // 4
 
 rna.TYPE; // "RNA"
-rna.SEQ; // "CAUG"
+rna.SEQ; // "ACUG"
 
 
 // Melting and annealing temperatures
