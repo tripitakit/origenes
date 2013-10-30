@@ -1,0 +1,153 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.2
+3 info using node@v0.10.13
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/patrick/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+12 verbose folder .
+13 info prepublish origenes@0.0.14
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/patrick/.npm/1f1177db-tar.lock
+16 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+17 verbose lock tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz /Users/patrick/.npm/15a5916d-83902-0-8332710508257151-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+21 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+22 verbose tar unpack /var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+23 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+24 verbose lock tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package /Users/patrick/.npm/23e3c7ce-83902-0-8332710508257151-package.lock
+25 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+26 verbose lock tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz /Users/patrick/.npm/15a5916d-83902-0-8332710508257151-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry Gruntfile.js
+33 silly gunzTarPerm extractEntry .jshintrc
+34 silly gunzTarPerm extractEntry test/origenes_test.js
+35 silly gunzTarPerm extractEntry test/sequence_test.js
+36 silly gunzTarPerm extractEntry lib/dictionaries.js
+37 silly gunzTarPerm extractEntry lib/origenes.js
+38 silly gunzTarPerm extractEntry lib/sequence.js
+39 silly gunzTarPerm extractEntry .travis.yml
+40 silly gunzTarPerm extractEntry LICENSE-MIT
+41 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+42 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+43 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+44 silly lockFile 15a5916d-83902-0-8332710508257151-tmp-tgz tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/tmp.tgz
+45 verbose tar pack [ '/Users/patrick/.npm/origenes/0.0.14/package.tgz',
+45 verbose tar pack   '/var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package' ]
+46 verbose tarball /Users/patrick/.npm/origenes/0.0.14/package.tgz
+47 verbose folder /var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+48 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+49 verbose lock tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package /Users/patrick/.npm/23e3c7ce-83902-0-8332710508257151-package.lock
+50 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+51 verbose lock tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz /Users/patrick/.npm/7f80ea76--npm-origenes-0-0-14-package-tgz.lock
+52 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+53 silly lockFile 23e3c7ce-83902-0-8332710508257151-package tar:///var/folders/y3/qmpj3l297qd1pjj3w8rw6l8r0000gn/T/npm-67375/1383155283902-0.8332710508257151/package
+54 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+55 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+56 silly lockFile 95b1991c-rick-npm-origenes-0-0-14-package /Users/patrick/.npm/origenes/0.0.14/package
+57 verbose lock /Users/patrick/.npm/origenes/0.0.14/package /Users/patrick/.npm/95b1991c-rick-npm-origenes-0-0-14-package.lock
+58 silly lockFile 95b1991c-rick-npm-origenes-0-0-14-package /Users/patrick/.npm/origenes/0.0.14/package
+59 silly lockFile 95b1991c-rick-npm-origenes-0-0-14-package /Users/patrick/.npm/origenes/0.0.14/package
+60 verbose tar unpack /Users/patrick/.npm/origenes/0.0.14/package.tgz
+61 silly lockFile fba2c575-rick-npm-origenes-0-0-14-package tar:///Users/patrick/.npm/origenes/0.0.14/package
+62 verbose lock tar:///Users/patrick/.npm/origenes/0.0.14/package /Users/patrick/.npm/fba2c575-rick-npm-origenes-0-0-14-package.lock
+63 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+64 verbose lock tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz /Users/patrick/.npm/7f80ea76--npm-origenes-0-0-14-package-tgz.lock
+65 silly gunzTarPerm modes [ '755', '644' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry .npmignore
+68 silly gunzTarPerm extractEntry README.md
+69 silly gunzTarPerm extractEntry LICENSE
+70 silly gunzTarPerm extractEntry Gruntfile.js
+71 silly gunzTarPerm extractEntry .jshintrc
+72 silly gunzTarPerm extractEntry .travis.yml
+73 silly gunzTarPerm extractEntry LICENSE-MIT
+74 silly gunzTarPerm extractEntry lib/dictionaries.js
+75 silly gunzTarPerm extractEntry lib/origenes.js
+76 silly gunzTarPerm extractEntry lib/sequence.js
+77 silly gunzTarPerm extractEntry test/origenes_test.js
+78 silly gunzTarPerm extractEntry test/sequence_test.js
+79 silly lockFile fba2c575-rick-npm-origenes-0-0-14-package tar:///Users/patrick/.npm/origenes/0.0.14/package
+80 silly lockFile fba2c575-rick-npm-origenes-0-0-14-package tar:///Users/patrick/.npm/origenes/0.0.14/package
+81 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+82 silly lockFile 7f80ea76--npm-origenes-0-0-14-package-tgz tar:///Users/patrick/.npm/origenes/0.0.14/package.tgz
+83 verbose chmod /Users/patrick/.npm/origenes/0.0.14/package.tgz 644
+84 verbose chown /Users/patrick/.npm/origenes/0.0.14/package.tgz [ 501, 20 ]
+85 silly lockFile 3a52ce78- .
+86 silly lockFile 3a52ce78- .
+87 silly publish { name: 'origenes',
+87 silly publish   description: 'Nucleotide sequence manipulation tools',
+87 silly publish   version: '0.0.14',
+87 silly publish   homepage: 'https://github.com/tripitakit/origenes',
+87 silly publish   author: { name: 'tripitakit', email: 'patrick.demarta@gmail.com' },
+87 silly publish   repository: { type: 'git', url: 'git://github.com/tripitakit/origenes.git' },
+87 silly publish   bugs: { url: 'https://github.com/tripitakit/origenes/issues' },
+87 silly publish   licenses:
+87 silly publish    [ { type: 'MIT',
+87 silly publish        url: 'https://github.com/tripitakit/origenes/blob/master/LICENSE-MIT' } ],
+87 silly publish   main: 'lib/origenes',
+87 silly publish   engines: { node: '>= 0.8.0' },
+87 silly publish   scripts: { test: 'grunt nodeunit' },
+87 silly publish   devDependencies:
+87 silly publish    { 'grunt-contrib-jshint': '~0.6.4',
+87 silly publish      'grunt-contrib-nodeunit': '~0.2.0',
+87 silly publish      'grunt-contrib-watch': '~0.5.3',
+87 silly publish      grunt: '~0.4.1' },
+87 silly publish   dependencies: { underscore: '~1.4.4', 'underscore.string': '~2.3.3' },
+87 silly publish   directories: [ 'lib', 'test' ],
+87 silly publish   keywords: [ 'DNA', 'sequence' ],
+87 silly publish   readme: '#Origenes\nNucleotide sequences manipulation tools.\n\n## Getting Started\nInstall the module with: `npm install origenes`\n\n```javascript\n\nvar Sequence = require(\'origenes\').Sequence;\n\n// Create some sequence instances\n\nvar simple_seq = new Sequence(\'ACTG\');\n/*\n\t{ SEQ: \'ACTG\', \n\t  LEN: 4,\n\t  TYPE: \'DNA\' }\n */\n\n\nvar\toligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");\n/*\n\t{ SEQ: \'GTTGACCGTAGCGAGTCCG\',\n\t  LEN: 19,\n\t  TYPE: \'DNA\',\n\t  TM: 62,\n\t  TA: 57 }\n */\n\n  \nvar rna = new Sequence("ACUG");\n/*\n\t{ SEQ: \'ACUG\', \n\t  LEN: 4,\n\t  TYPE: \'RNA\' }\n */\n\n\nvar\tcomplex_seq = new Sequence(\'AN-RCTYGK\');\n/*\n\t{ SEQ: \'AN-RCTYGK\',\n\t  LEN: 9,\n\t  TYPE: \'DNA\' }\n */\n\n \n// Sequence instances are immutable, their properties are constants\n\nsimple_seq.SEQ = "ATATATATATA";\nsimple_seq.aNewProperty = "something":\nsimple_seq; \n/*\n\t{ SEQ: \'ACTG\', \n\t  LEN: 4,\n\t  TYPE: \'DNA\' }\n */\n\n\n// Melting and annealing temperatures are calculated for oligonucleotides [18..25nt]\n\noligonucleotide.TM; // 62  as 4*(G+C) + 2*(A+T) in °C\noligonucleotide.TA; // 57  as (TM - 5) in °C\n\n\n// Tm, Ta are not defined for sequences shorter than 18nt or longer than 25nt\n\nsimple_seq.TM; // undefined\nsimple_seq.TA; // undefined\n\n\n// Sequence instance methods return new Sequence instances\n\nsimple_seq.transcribe();\n/*\n\t{ SEQ: \'ACUG\', \n\t  LEN: 4,\n\t  TYPE: \'RNA\' }\n */\n\n\nsimple_seq.reverse();\n/*\n\t{ SEQ: \'GTCA\', \n\t  LEN: 4,\n\t  TYPE: \'DNA\' }\n */\n\n\nsimple_seq.complement(); \n/*\n\t{ SEQ: \'TGAC\', \n\t  LEN: 4,\n\t  TYPE: \'DNA\' }\n */\n \n\ncomplex_seq.complement(); \n/* \n\t{ SEQ: \'TN-YGARCN\',\n\t  LEN: 9,\n\t  TYPE: \'DNA\' }\n*/ \n\n\nrna.complement(); \n/*\n\t{ SEQ: \'UGAC\', \n\t  LEN: 4,\n\t  TYPE: \'RNA\' }\n */\n\n\nrna.transcribe(); // \'Error: can\'t transcribe RNA.\'\n\n\n// Instance methods are chainable\n\nsimple_seq.reverse().complement(); \n/*\n\t{ SEQ: \'CAGT\', \n\t  LEN: 4,\n\t  TYPE: \'DNA\' }\n */\n\nsimple_seq.SEQ == simple_seq.reverse().reverse().SEQ; // true\n\nsimple_seq.reverse().complement().SEQ == simple_seq.complement().reverse().SEQ; // true\n\n```\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.\n\nLint and test your code using [Grunt](http://gruntjs.com/).\n\n\n## License\nCopyright (c) 2013 tripitakit  \nLicensed under the MIT license.\n\n',
+87 silly publish   readmeFilename: 'README.md',
+87 silly publish   _id: 'origenes@0.0.14',
+87 silly publish   dist: { shasum: 'f903bfd99aad01be7aba2e5a58d40d30fec210d5' },
+87 silly publish   _from: '.' }
+88 verbose url raw origenes
+89 verbose url resolving [ 'https://registry.npmjs.org/', './origenes' ]
+90 verbose url resolved https://registry.npmjs.org/origenes
+91 info trying registry request attempt 1 at 18:48:04
+92 http PUT https://registry.npmjs.org/origenes
+93 http 409 https://registry.npmjs.org/origenes
+94 verbose url raw origenes
+95 verbose url resolving [ 'https://registry.npmjs.org/', './origenes' ]
+96 verbose url resolved https://registry.npmjs.org/origenes
+97 info trying registry request attempt 1 at 18:48:05
+98 http GET https://registry.npmjs.org/origenes
+99 http 200 https://registry.npmjs.org/origenes
+100 error publish fail Cannot publish over existing version.
+100 error publish fail Update the 'version' field in package.json and try again.
+100 error publish fail
+100 error publish fail If the previous version was published in error, see:
+100 error publish fail     npm help unpublish
+100 error publish fail
+100 error publish fail To automatically increment version numbers, see:
+100 error publish fail     npm help version
+101 error System Darwin 12.5.0
+102 error command "node" "/usr/local/bin/npm" "publish"
+103 error cwd /Users/patrick/projects/nodes/origenes
+104 error node -v v0.10.13
+105 error npm -v 1.3.2
+106 error code EPUBLISHCONFLICT
+107 verbose exit [ 1, true ]
