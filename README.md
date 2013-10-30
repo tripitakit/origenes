@@ -9,7 +9,6 @@ Install the module with: `npm install origenes`
 var Sequence = require('origenes').Sequence;
 
 // Create some sequence instances
-
 var simple_seq = new Sequence('ACTG');
 /*
 	{ SEQ: 'ACTG', 
@@ -17,8 +16,7 @@ var simple_seq = new Sequence('ACTG');
 	  TYPE: 'DNA' }
  */
 
-
-var	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
+var oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
 /*
 	{ SEQ: 'GTTGACCGTAGCGAGTCCG',
 	  LEN: 19,
@@ -27,25 +25,21 @@ var	oligonucleotide = new Sequence("GTTGACCGTAGCGAGTCCG");
 	  TA: 57 }
  */
 
-  
 var rna = new Sequence("ACUG");
 /*
 	{ SEQ: 'ACUG', 
 	  LEN: 4,
 	  TYPE: 'RNA' }
  */
-
-
-var	complex_seq = new Sequence('AN-RCTYGK');
+ 
+var complex_seq = new Sequence('AN-RCTYGK');
 /*
 	{ SEQ: 'AN-RCTYGK',
 	  LEN: 9,
 	  TYPE: 'DNA' }
  */
 
- 
 // Sequence instances are immutable, their properties are constants
-
 simple_seq.SEQ = "ATATATATATA";
 simple_seq.aNewProperty = "something":
 simple_seq; 
@@ -55,28 +49,21 @@ simple_seq;
 	  TYPE: 'DNA' }
  */
 
-
 // Melting and annealing temperatures are calculated for oligonucleotides [18..25nt]
-
 oligonucleotide.TM; // 62  as 4*(G+C) + 2*(A+T) in °C
 oligonucleotide.TA; // 57  as (TM - 5) in °C
 
-
 // Tm, Ta are not defined for sequences shorter than 18nt or longer than 25nt
-
 simple_seq.TM; // undefined
 simple_seq.TA; // undefined
 
-
 // Sequence instance methods return new Sequence instances
-
 simple_seq.transcribe();
 /*
 	{ SEQ: 'ACUG', 
 	  LEN: 4,
 	  TYPE: 'RNA' }
  */
-
 
 simple_seq.reverse();
 /*
@@ -85,14 +72,12 @@ simple_seq.reverse();
 	  TYPE: 'DNA' }
  */
 
-
 simple_seq.complement(); 
 /*
 	{ SEQ: 'TGAC', 
 	  LEN: 4,
 	  TYPE: 'DNA' }
  */
- 
 
 complex_seq.complement(); 
 /* 
@@ -101,7 +86,6 @@ complex_seq.complement();
 	  TYPE: 'DNA' }
 */ 
 
-
 rna.complement(); 
 /*
 	{ SEQ: 'UGAC', 
@@ -109,12 +93,9 @@ rna.complement();
 	  TYPE: 'RNA' }
  */
 
-
 rna.transcribe(); // 'Error: can't transcribe RNA.'
 
-
 // Instance methods are chainable
-
 simple_seq.reverse().complement(); 
 /*
 	{ SEQ: 'CAGT', 
