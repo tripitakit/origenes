@@ -8,7 +8,7 @@ exports['test'] = {
       this.simple_oligo = new Sequence("ACTG");
 	  this.complex_oligo = new Sequence("AN-RCTYGK");
 	  this.long_oligo = new Sequence("GTTGACCGTAGCGAGTCCG");
-	  this.rna = new Sequence("ACUG");
+	  this.rna = new Sequence("AUGGAACUGACUGAAGAUUGA");
 	  
       done();
     },
@@ -82,7 +82,7 @@ exports['test'] = {
 	
 	'complement a RNA sequence' : function(test) {
 		test.expect(1);
-		test.strictEqual(this.rna.complement().SEQ, "UGAC");
+		test.strictEqual(this.rna.complement().SEQ, "UACCUUGACUGACUUCUAACU");
 		test.done();
 	},
 	
@@ -110,5 +110,27 @@ exports['test'] = {
 		test.done();
 	}, 
 	
+	'translate an RNA into new seq instance of type PROT': function(test) {
+		test.expect(2);
+		test.equal(this.rna.translate().TYPE, "PROT");
+		test.equal(this.rna.translate().SEQ, "MELTED*");
+		test.done();
+	},
 	
+	'translate an DNA into new seq instance of type PROT': function(test) {
+		test.expect(2);
+		test.equal(this.long_oligo.translate().TYPE, "PROT");
+		test.equal(this.long_oligo.translate().SEQ, "VDRSES")
+		test.done();
+	},
 };
+
+
+
+
+
+
+
+
+
+
