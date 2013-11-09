@@ -38,5 +38,5 @@
   	"underscore.string": "~2.3.3"
   },
   "directories" : ["lib", "test"],
-  "keywords": ["DNA","sequence"]
+  "keywords": ["dna", "rna", "nucleotide", "sequence", "bioinformatics"]
 }
