@@ -122,7 +122,7 @@ var Sequence = require('origenes').Sequence;
 	simple_seq.reverse().complement().SEQ == simple_seq.complement().reverse().SEQ; // true
 
 
-// Translate a RNA Sequence obect into a new Sequence instance of type PROT
+// Translate a RNA Sequence object into a new Sequence instance of type PROT
 	
 	rna.translate();
 	/*
@@ -131,7 +131,7 @@ var Sequence = require('origenes').Sequence;
 		  TYPE: 'PROT' }
 	 */
 
-// translate a DNA Sequence obect into new Sequence instance of type PROT
+// translate a DNA Sequence object into new Sequence instance of type PROT
 // with automatic/under the hood transcription()
 
 	long_oligo.translate();
