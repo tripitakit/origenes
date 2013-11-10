@@ -127,7 +127,7 @@ var Sequence = require('origenes').Sequence;
 	rna.translate();
 	/*
 		{ SEQ: 'MELTED*',
-		  LEN: 6,
+		  LEN: 7,
 		  TYPE: 'PROT' }
 	 */
 
